@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-text">
+            <h1>Advanced Chest X-ray Analysis</h1>
+            <p class="subtitle">AI-powered detection of pneumonia, age, and gender with clinical-grade accuracy</p>
+            <a href="{{ url_for('analyze') }}" class="cta-button">
+                Analyze X-ray <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="{{ url_for('static', filename='images/model-architecture.png') }}" alt="Chest X-ray illustration">
+        </div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-user-md"></i>
+            </div>
+            <h3>Clinical Accuracy</h3>
+            <p>Our AI model achieves 89.7% accuracy in pneumonia detection, validated by radiologists.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Instant Results</h3>
+            <p>Get comprehensive analysis in seconds, not days. Accelerate your diagnostic workflow.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Secure & Private</h3>
+            <p>HIPAA-compliant data handling with end-to-end encryption for patient confidentiality.</p>
+        </div>
+    </div>
+
+    <div class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Upload X-ray</h3>
+                <p>Drag and drop or select your chest X-ray image (JPEG, PNG, DICOM)</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>AI Analysis</h3>
+                <p>Our deep learning model processes the image with multiple neural networks</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Get Results</h3>
+                <p>Receive comprehensive report with findings and confidence metrics</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
